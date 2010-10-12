@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+/* @file style_vivian.css
+ * General styles for Nitobe_vivian, subtheme of Nitobe. http://drupal.org/projects/nitobe
+ *
+ * $Id
+ */
+
+/* ****************************************************************************
+ * Anchor links
+ * ************************************************************************* */
+a:focus {
+	outline: #ccc 2px dotted;
+}
+
+/* ****************************************************************************
+ * Header area
+ * ************************************************************************* */
+#page-headline {
+  text-transform: none;
+}
+
+#page-headline h1#page-title {
+  text-transform: none;
+}
+
+#header-area #title-group #site-title {
+  text-transform: none;
+}
+
+#header-area #title-group #site-title a {
+  text-transform: none;
+}
+
+/* ****************************************************************************
+ * Nodes
+ * ************************************************************************* */
+
+.node .node-headline h2 {
+  text-transform: none;
+}

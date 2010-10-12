@@ -1,0 +1,32 @@
+  ; --------------------------------------------------------------------------
+  ; Basic information about the theme.
+  ; $Id
+  ; --------------------------------------------------------------------------
+name        = Nitobe_vivian
+description = "Fixed width theme based on Nitobe"
+screenshot  = images/screenshot.png
+core        = 6.x
+engine      = phptemplate
+base theme  = nitobe
+
+  ; --------------------------------------------------------------------------
+  ; Theme regions.
+  ; --------------------------------------------------------------------------
+regions[header]              = Header
+regions[masthead]            = Masthead
+regions[content]             = Content
+regions[left]                = Left Sidebar
+regions[right]               = Right Sidebar
+regions[bottom_left]         = Bottom Left
+regions[bottom_center_left]  = Bottom Center Left
+regions[bottom_center_right] = Bottom Center Right
+regions[bottom_right]        = Bottom Right
+regions[footer]              = Footer
+
+  ; --------------------------------------------------------------------------
+  ; The theme's CSS files.
+  ;
+  ; See the Drupal 6 Theme Guide at http://drupal.org/node/171209 for details
+  ; on overriding stylesheets.
+  ; --------------------------------------------------------------------------
+  stylesheets[screen][] = style_vivian.css
