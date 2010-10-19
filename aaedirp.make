@@ -1,6 +1,6 @@
 ; $Id$
 ;
-; Makes the AEEDIRP web site (I hope!)
+; Makes the AEEDIRP web site
 ;
 
 api = 2
@@ -15,8 +15,8 @@ core = 6.x
 
 projects[drupal][type] = "core"
 
-; Projects
-; --------
+; Modules
+; -------
 
 projects[] = cck
 projects[] = link
@@ -34,3 +34,8 @@ projects[] = menu_breadcrumb
 projects[] = node_import
 projects[] = node_export
 projects[] = features
+
+; Themes
+; ------
+
+projects[] = nitobe

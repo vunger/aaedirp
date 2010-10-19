@@ -102,11 +102,28 @@ function aaedirp_profile_tasks(&$task, $url) {
     foreach($blocks as $block) {
       drupal_write_record('boxes', $block);
     }
+    
+    // Enable our theme and subtheme, and set subtheme as default
+    $themes = system_theme_data();
+    $theme = 'nitobe';
+    $subtheme = 'nitobe_vivian';
+    if (isset($themes[$theme])) {
+      system_initialize_theme_blocks($theme);
+      db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = '%s'", $theme);
+      }
+    if (isset($themes[$subtheme])) {
+      system_initialize_theme_blocks($subtheme);
+      db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = '%s'", $subtheme);
+      variable_set('theme_default', $subtheme);
+    } else {
+      variable_set('theme_default', $theme);
+    }
+    menu_rebuild();
+    drupal_rebuild_theme_registry();
   }
 }
 
 function _add_content_types($file) {
-
   $form_state = array(
     'values' => array(
          'type_name' => '<create>',
@@ -145,7 +162,7 @@ function _add_roles_permissions() {
   foreach ($roles as $role) {
     // Write to role table
     // drupal_write_record('role', $role['name']);
-	db_query("INSERT INTO {role} (name) VALUES ('%s')", $role['name']);
+    db_query("INSERT INTO {role} (name) VALUES ('%s')", $role['name']);
     // Determine rid (role id)
     $result = db_fetch_array(db_query("SELECT rid FROM {role} WHERE role.name = '%s'", $role['name']));
     // Write to permission table
