@@ -91,7 +91,7 @@ function aaedirp_profile_tasks(&$task, $url) {
     // Add blocks
     $blocks = array(
       0 => array(
-        'body' => '<p>The ultimate objective of the Atlantic Aboriginal Economic Development Integrated Research Program (AAEDIRP) is to improve the lives of the Aboriginal people in the region.</p><p><a href="content/about-us">Read More</a>',
+        'body' => '<p>The ultimate objective of the Atlantic Aboriginal Economic Development Integrated Research Program (AAEDIRP) is to improve the lives of the Aboriginal people in the region.</p><p><a href="about">Read More</a>',
         'info' => 'about'
       ),
       1 => array(
