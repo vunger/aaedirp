@@ -14,6 +14,14 @@ a:focus {
 }
 
 /* ****************************************************************************
+ * Breaks and alignments
+ * ************************************************************************* */
+.rule-top {
+  background: #fff;
+  border-top: 0;
+}
+
+/* ****************************************************************************
  * Header area
  * ************************************************************************* */
 #page-headline {
@@ -30,6 +38,30 @@ a:focus {
 
 #header-area #title-group #site-title a {
   text-transform: none;
+}
+
+/* ****************************************************************************
+ * Primary tabs and navigation
+ * ************************************************************************* */
+
+/* Suckerfish dropdown menus  */
+
+ul#primary-nav li {
+  position: relative;
+  padding: 0 .5em;
+}
+
+ul#primary-nav li ul {
+  display: none;
+}
+
+ul#primary-nav li:hover ul {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: #ddd url(../../nitobe/styles/images/background-light.gif) repeat;
+  top: 1.7em;
+  width: 8em;
 }
 
 /* ****************************************************************************
